@@ -10,7 +10,6 @@ import { CanvasReveal } from "@/components/canvas";
 import SectionBadge from "@/components/ui/section-badge";
 import { Portfolio } from "@/components/portfolio";
 import { SparkText } from "@/components/textspark";
-import { TimeLineTemp } from "@/components/timeline";
 import { Waitlist } from "@/components/waitlist";
 import { Team } from "@/components/team";
 import Icons from "@/components/global/icons";
