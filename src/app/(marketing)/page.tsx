@@ -6,6 +6,12 @@ import Image from "next/image";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { CanvasReveal } from "@/components/canvas";
+import SectionBadge from "@/components/ui/section-badge";
+import { Portfolio } from "@/components/portfolio";
+import { SparkText } from "@/components/textspark";
+import { TimeLineTemp } from "@/components/timeline";
+
 const page = () => {
   return (
     <>
@@ -36,7 +42,7 @@ const page = () => {
 
               <div className="flex flex-col items-center mt-8 max-w-3xl w-11/12 md:w-full">
                 <h1 className="text-4xl md:text-6xl lg:textxl md:!leading-snug font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">
-                  Build your next idea and ship your dream site
+                  Build your dream site with this template
                 </h1>
                 <p className="text-base md:text-lg text-foreground/80 mt-6 text-center">
                   Zero code, maximum speed. Make professional sites easy, fast
@@ -79,6 +85,66 @@ const page = () => {
             </div>
           </Container>
         </Wrapper>
+
+        <Wrapper className=" felx flex-col items-center justify-center py-12 relative">
+          <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-primary rounded-full blur-[10rem] -z-10"></div>
+          <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-indigo-600 rounded-full blur-[10rem] -z-10"></div>
+          <Container>
+            <div className=" max-w-md mx-auto text-start md:text-center">
+              <SectionBadge title="Discover" />
+              <h2 className=" text-3xl lg:text-4xl font-semibold mt-6">
+                Discover all powerfull features
+              </h2>
+              <p className=" text-muted-foreground mt-6">
+                The Agency template offers a range of features to help you build
+                your own app
+              </p>
+            </div>
+          </Container>
+          <Container>
+            <CanvasReveal />
+          </Container>
+        </Wrapper>
+
+
+        <Wrapper className=" felx flex-col items-center justify-center py-12 relative">
+          <Container>
+            <div className=" max-w-md mx-auto text-start md:text-center">
+              <SectionBadge title="Portfolio" />
+            </div>
+          </Container>
+          <Container>
+            <Portfolio />
+          </Container>
+        </Wrapper>
+
+
+
+        <Wrapper className=" felx flex-col items-center justify-center py-12 relative">
+          <Container>
+            <div className=" max-w-md mx-auto text-start md:text-center">
+              <SectionBadge title="Philosophy" />
+            </div>
+          </Container>
+          <Container>
+            <SparkText text="The Adons Project" />
+          </Container>
+        </Wrapper>
+
+        <Wrapper className=" felx flex-col items-center justify-center py-12 relative">
+          <Container>
+            <div className=" max-w-md mx-auto text-start md:text-center">
+              <SectionBadge title="Time Line" />
+            </div>
+          </Container>
+          <Container>
+            <TimeLineTemp />
+          </Container>
+        </Wrapper>
+       
+
+
+
       </section>
     </>
   );
