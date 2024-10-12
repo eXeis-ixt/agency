@@ -1,17 +1,15 @@
 <h1 align="start">
-  Astra - AI Powered Website Builder
+  The Agency - AI Powered Website Builder
 </h1>
 
-<img width="1280" alt="Astra Thumbnail" src="https://github.com/eXeis-ixt/agency/blob/main/public/The-Agency-screenshot.png?raw=true">
+<img width="1280" alt="The Agency Thumbnail" src="https://github.com/eXeis-ixt/agency/blob/main/public/The-Agency-screenshot.png?raw=true">
 
 
 ## Introduction
 
 The Agency is a modern, fully responsive website built with a powerful tech stack. This project showcases the use of Next.js for server-side rendering, TailwindCSS for sleek styling, shadcn UI for elegant components, and Clerk for secure authentication.
 
-## Watch Tutorial on YouTube
 
-Check out the preivew to see how this website was built: [Astra Website Tutorial](https://youtu.be/zSz67kLPbZY?si=mVBTTh23pv_roRHQ)
 
 ## Tech Stack
 
