@@ -11,6 +11,10 @@ import SectionBadge from "@/components/ui/section-badge";
 import { Portfolio } from "@/components/portfolio";
 import { SparkText } from "@/components/textspark";
 import { TimeLineTemp } from "@/components/timeline";
+import { Waitlist } from "@/components/waitlist";
+import { Team } from "@/components/team";
+import Icons from "@/components/global/icons";
+import { features } from "@/constants";
 
 const page = () => {
   return (
@@ -48,6 +52,9 @@ const page = () => {
                   Zero code, maximum speed. Make professional sites easy, fast
                   and fun while delivering best-in-class SEO, performance.
                 </p>
+                <div className=" mt-6">
+                <Team />
+              </div>
                 <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
                   <Link
                     href="#"
@@ -86,26 +93,70 @@ const page = () => {
           </Container>
         </Wrapper>
 
+
+        <Wrapper className=" felx flex-col items-center justify-center py-12 relative">
+        <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-primary rounded-full blur-[10rem] -z-10"></div>
+        <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-indigo-600 rounded-full blur-[10rem] -z-10"></div>
+        <Container>
+          <div className=" max-w-md mx-auto text-start md:text-center">
+            <SectionBadge title="Features" />
+            <h2 className=" text-3xl lg:text-4xl font-semibold mt-6">
+              Discover all powerfull features
+            </h2>
+            <p className=" text-muted-foreground mt-6">
+              TheStartup offers a range of features to help you build your own
+              app
+            </p>
+          </div>
+        </Container>
+        <Container>
+          <div className=" flex items-center justify-center mx-auto mt-8">
+            <Icons.feature className=" mx-auto h-80" />
+          </div>
+        </Container>
+        <Container>
+          <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
+              {features.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="flex flex-col items-start lg:items-start px-0 md:px-0"
+                >
+                  <div className="flex items-center justify-center">
+                    <feature.icon className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-lg font-medium mt-4">{feature.title}</h3>
+                  <p className="text-muted-foreground mt-2 text-start lg:text-start">
+                    {feature.info}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Wrapper>
+
+
         <Wrapper className=" felx flex-col items-center justify-center py-12 relative">
           <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-primary rounded-full blur-[10rem] -z-10"></div>
-          <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-indigo-600 rounded-full blur-[10rem] -z-10"></div>
+          <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-red-600 rounded-full blur-[10rem] -z-10"></div>
           <Container>
             <div className=" max-w-md mx-auto text-start md:text-center">
               <SectionBadge title="Discover" />
               <h2 className=" text-3xl lg:text-4xl font-semibold mt-6">
-                Discover all powerfull features
+                Discover all services
               </h2>
               <p className=" text-muted-foreground mt-6">
                 The Agency template offers a range of features to help you build
                 your own app
               </p>
+             
             </div>
           </Container>
           <Container>
             <CanvasReveal />
           </Container>
         </Wrapper>
-
 
         <Wrapper className=" felx flex-col items-center justify-center py-12 relative">
           <Container>
@@ -118,6 +169,21 @@ const page = () => {
           </Container>
         </Wrapper>
 
+       
+
+        {/* <Wrapper className=" felx flex-col items-center justify-center py-12 relative">
+          <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-primary rounded-full blur-[10rem] -z-10"></div>
+          <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-red-600 rounded-full blur-[10rem] -z-10"></div>
+
+          <Container>
+            <div className=" max-w-md mx-auto text-start md:text-center">
+              <SectionBadge title="Time Line" />
+            </div>
+          </Container>
+          <Container>
+            <TimeLineTemp />
+          </Container>
+        </Wrapper> */}
 
 
         <Wrapper className=" felx flex-col items-center justify-center py-12 relative">
@@ -131,19 +197,19 @@ const page = () => {
           </Container>
         </Wrapper>
 
+
         <Wrapper className=" felx flex-col items-center justify-center py-12 relative">
+          <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-primary rounded-full blur-[10rem] -z-10"></div>
+
           <Container>
             <div className=" max-w-md mx-auto text-start md:text-center">
-              <SectionBadge title="Time Line" />
+              <SectionBadge title="Waitlist" />
             </div>
           </Container>
           <Container>
-            <TimeLineTemp />
+            <Waitlist />
           </Container>
         </Wrapper>
-       
-
-
 
       </section>
     </>
